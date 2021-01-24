@@ -14,15 +14,7 @@
 
 **2.1** **Caffe格式的中文KWS模型**
 
-​		如1.2节所述，现有NNIE工具链只支持将Caffe模型转换为悟空模型，因此需要先训练出Caffe格式的KWS模型。模型方面，我们参考论文《
-
-[Convolutional]: https://www.isca-speech.org/archive/interspeech_2015/papers/i15_1478.pdf
-
-》，实现了基于卷积神经网络的唤醒词识别模型。针对中文场景，我们采用出门问问公司开源的中文唤醒词数据集《
-
-[MobvoiHotwords]: http://www.openslr.org/87/
-
-》进行训练。Caffe版本的中文KWS模型的原型及预训练结果在caffe_models目录下给出。
+​		如1.2节所述，现有NNIE工具链只支持将Caffe模型转换为悟空模型，因此需要先训练出Caffe格式的KWS模型。模型方面，我们参考论文《[Convolutional Neural Networks for Small-footprint Keyword Spotting](https://www.isca-speech.org/archive/interspeech_2015/papers/i15_1478.pdf)》，实现了基于卷积神经网络的唤醒词识别模型。针对中文场景，我们采用出门问问公司开源的中文唤醒词数据集《[MobvoiHotwords](http://www.openslr.org/87/)》进行训练。Caffe版本的中文KWS模型的原型及预训练结果在caffe_models目录下给出。
 
 ​		在进行模型训练之前，需要对数据集进行了特征预处理，主要包括计算MFCC值和归一化等。其中，MFCC特征计算和归一化的实现逻辑在utils/feature_preprocessing.py中。
 
